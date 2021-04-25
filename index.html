@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>JavaScript Web Terminal</title>
+  <title>terminal</title>
   <link rel="stylesheet" href="style.css">
  
 </head>
@@ -10,8 +10,6 @@
  
 <div class="gradientCont">
 		<div class="mainCont">
-		<h2>JS Web Terminal</h2>
-		<h3>Talk With Me, I'm Your Personal Assistant.</h3>
 		<div class="terminalCont">
 		<div id="terminalReslutsCont">
 		</div>
@@ -64,14 +62,13 @@
   var postHelpList = function(){
     // Array of all the help keywords
     var helpKeyWords = [
-      "- Open + website URL to open it in the browser (ex. open discord.com)",
-      "- Google + keyword to search directly in Google (ex. google web development)",
-      "- YouTube + keyword to search directly in YouTube (ex. ProgrammingWithNiko)",
+      "- url + url",
+      "- search + keyword",
+      "- yt + yt search result to search it",
       "- Wiki + keyword to search directly in Wikipedia (ex. wiki numbers)",
-      "- 'Time' will display the current time.",
-      "- 'Date' will display the current date.",
-      "- 'tech' will make you expert by watching videos",
-      "* There are more keywords that you have to discover by yourself."
+      "- 'time' self-explanatory",
+      "- 'date' self-explanatory",
+      "- 'osver' shows version",
     ].join('<br>');
     addTextToResults(helpKeyWords);
   }
@@ -95,7 +92,7 @@
     }
  
     var currentTime = timeHours + ":" + timeMinutes;
-    var currentDate = dateDay + "/" + dateMonth + "/" + dateYear;
+    var currentDate = dateMonth + "/" + dateDay + "/" + dateYear;
  
     if (postTimeDay == "time"){
       addTextToResults(currentTime);
@@ -116,16 +113,14 @@
     switch(textInputValueLowerCase){
       // replies
  
-      case "hello":
-      case "hi":
-      case "hola":
+      case "osver":
         clearInput();
-        addTextToResults("Hello, I am your assistant... I am based on pure JavaScript.");
+        addTextToResults("NickTerm Unstable 0.1.0");
         break;
  
        case "how did you make this":
         clearInput();
-        addTextToResults("i stole this code");
+        addTextToResults("i stole this code, sorry programmingwithniko on youtube (there i gave credit are you happy now)");
         break;
  
       // replies 
